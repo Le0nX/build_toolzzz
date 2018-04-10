@@ -3,9 +3,9 @@
 LDFLAGS += -o bin/$(TARGET).elf -Map bin/$(TARGET).map
 LDOPTS:= $(addprefix -Xlinker ,$(LDFLAGS)) -lm
 
-include build_toolzzz/version.mk
+#include build_toolzzz/version.mk
 
-all: version bin/$(TARGET).elf
+all: bin/$(TARGET).elf
 
 bin/$(TARGET).elf: $(OBJS)
 	@mkdir -p bin
