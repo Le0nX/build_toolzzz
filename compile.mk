@@ -5,12 +5,11 @@ CPP :=  g++
 BFLAGS += -Wall -g3 -Wextra -Werror
 CPPFLAGS += $(BFLAGS) -std=c++14 -pthread
 
-COMPILE_COMMON := build_toolzzz/global_compile.mk
+GLOBAL_COMPILE := build_toolzzz/global_compile.mk
 
-COMPILE_MK := sw_infrastructure/build_tools/compile_mcu.mk
-COMMON_OBJ_DEPS := makefile $(COMPILE_GLOBAL) #здесь можно подключить зависимости.
+COMMON_OBJ_DEPS := makefile $(GLOBAL_COMPILE) #здесь можно подключить зависимости.
 
-include $(COMPILE_GLOBAL) 
+include $(GLOBAL_COMPILE) 
 
 .SECONDEXPANSION:
 all: $$(OBJS)
