@@ -11,7 +11,7 @@ SIZE := size
 
 OBJS := $(shell find .obj -name "*.o" )
 
-CFLAGS = -Wall -g3 -Wextra -Werror -pthread
+CFLAGS = -Wall -g3 -Wextra -Werror
 LDFLAGS := --gc-sections 
 
 include build_toolzzz/global_linker.mk
