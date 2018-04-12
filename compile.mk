@@ -3,7 +3,7 @@ CC :=  gcc
 CPP :=  g++
 
 BFLAGS += -Wall -g3 -Wextra -Werror
-CPPFLAGS += $(BFLAGS) -std=c++14 
+CPPFLAGS += $(BFLAGS) -std=c++14 -flto
 
 GLOBAL_COMPILE := build_toolzzz/global_compile.mk
 
